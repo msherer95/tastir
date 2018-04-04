@@ -1,0 +1,133 @@
+$tablet-width: 768px;
+$desktop-sm-width: 960px;
+
+@mixin for-tablet {
+    @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-sm-width - 1px}) {
+        @content;
+    }
+}
+
+#menu-tile {
+    background-color: #8DA5F7;
+    height: 300px;
+    width: 264px;
+    min-width: 264px;
+    border-radius: 7px;
+    margin-top: 60px;
+    transform: rotateY(-90deg);
+    transition: transform 350ms cubic-bezier(0.39,0.5,0.15,1.36);
+
+    @include for-tablet {
+        height: 250px;
+        width: 198px;
+        min-width: 198px;
+    }
+
+    @include for-mobile {
+       width: 100vw;
+       margin-top: 0px;
+       border-radius: 0px;
+       height: 280px;
+       flex: 0 0 auto;
+    }
+
+    .menu-tile-img {
+        margin-left: 102px;
+        margin-top: -266px;
+        position: relative;
+        z-index: 2;
+        opacity: 0;
+        transform: translateY(-20px);
+        transition: transform 350ms cubic-bezier(0.39,0.5,0.15,1.36);
+        
+        @include for-tablet {
+            height: 56px !important;
+            margin-left: 78px;
+            margin-top: -225px;
+        }
+
+        @include for-mobile {
+            margin-top: 35px;
+            margin-left: calc(50vw - 30px);
+        }
+    }
+
+    .menu-tile-ellipse {
+        margin-top: -220px;
+        position: relative;
+        z-index: 1;
+        transform: scale(0,0);
+        transition: transform 350ms;
+        transform-origin: center;
+
+        @include for-tablet {
+            height: 60px !important;
+            margin-top: -191px;
+            margin-left: -6px;
+        }
+
+        @include for-mobile {
+            margin-top: -30px;
+            margin-left: calc(50vw - 131px);
+        }
+    }
+}
+
+#menu-tile-heading {
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+    margin-top: -160px;
+    color: #21274A;
+
+    @include for-tablet {
+        font-size: 17px;
+        margin-top: -143px;
+    }
+
+    @include for-mobile {
+        margin-top: -15px;
+    }
+}
+
+#menu-tile-text {
+    font-size: 12px;
+    font-weight: 400;
+    text-align: center;
+    width: 200px;
+    margin-left: 32px;
+    margin-top: -10px;
+    line-height: 20px;
+    color: #21274A;
+
+    @include for-tablet {
+        width: 153px;
+        line-height: 18px;
+        font-size: 12px;
+        margin-left: 23px;
+    }
+
+    @include for-mobile {
+        font-size: 14px;
+        width: 300px;
+        line-height: 20px;
+        margin-top: -13px;
+        margin-left: calc(50vw - 150px);
+    }
+}
+
+#menu-tile-shadow {
+    background-color: #889FEE;
+    height: 300px;
+    width: 7px;
+    margin-top: 0px;
+    margin-left: 0px;
+
+    @include for-tablet {
+        height: 250px;
+    }
+    
+    @include for-mobile {
+        display: none;
+    }
+}

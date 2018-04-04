@@ -1,0 +1,129 @@
+$mobile-width: 480px;
+$tablet-width: 768px;
+$desktop-sm-width: 960px;
+
+@mixin for-tablet {
+    @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-sm-width - 1px}) {
+        @content;
+    }
+}
+
+@mixin for-mobile {
+    @media (max-width: #{$mobile-width}) {
+        @content;
+    }
+}
+
+#wine-tile {
+    height: 300px;
+    width: 264px;
+    background-color: #9C9CF0;
+    border-radius: 7px;
+    margin-top: 60px;
+    transform: rotateY(-90deg);
+    transition: transform 350ms;
+
+    @include for-tablet {
+        height: 250px;
+        width: 198px;
+    }
+
+    @include for-mobile {
+        flex: 0 0 auto;
+        width: 100vw;
+        height: 280px;
+        border-radius: 0px;
+    }
+
+    .wine-tile-img {
+        margin-left: 109px;
+        margin-top: 26px;
+        position: relative;
+        z-index: 5;
+        opacity: 0;
+        transform: translateY(-20px);
+        transition: transform 350ms cubic-bezier(0.39,0.5,0.15,1.36);
+
+        @include for-tablet {
+            margin-left: 80px;
+            margin-top: 23px;
+            height: 53px !important;
+        }
+
+        @include for-mobile {
+            margin-left: calc(50vw - 23px);
+            margin-top: 35px;
+        }
+    }
+
+    .wine-tile-ellipse {
+        margin-top: -26px;
+        transform: scale(0,0);
+        transition: transform 350ms cubic-bezier(0.39,0.5,0.15,1.36);
+        transform-origin: center;
+
+        @include for-tablet {
+            margin-top: -20px;
+        }
+
+        @include for-mobile {
+            height: 70px;
+            margin-left: calc(50vw - 122px);
+        }
+    }
+}
+
+
+#wine-tile-heading {
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+    margin-top: -10px;
+    color: #21274A;
+
+    @include for-tablet {
+        font-size: 17px;
+    }
+}
+
+#wine-tile-text {
+    font-size: 12px;
+    font-weight: 400;
+    text-align: center;
+    width: 200px;
+    margin-left: 32px;
+    margin-top: -10px;
+    line-height: 20px;
+    color: #21274A;
+
+    @include for-tablet {
+        line-height: 18px;
+        margin-left: 24px;
+        width: 155px;
+        font-size: 12px;
+    }
+
+    @include for-mobile {
+        font-size: 14px;
+        width: 300px;
+        margin-left: calc(50vw - 150px);
+    }
+}
+
+#wine-tile-shadow {
+    background-color: #9696E7;
+    height: 300px;
+    width: 7px;
+    margin-top: -262px;
+    margin-left: 257px;
+
+    @include for-tablet {
+        height: 250px;
+        margin-top: -232px;
+        margin-left: 191px;
+    }
+
+    @include for-mobile {
+        display: none;
+    }
+}

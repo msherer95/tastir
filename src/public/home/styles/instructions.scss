@@ -1,0 +1,228 @@
+
+
+.instructions-row {
+    display: flex;
+    flex-direction: row;
+
+    .dashed-line-wrap {
+        width: 20px;
+        height: 200px;
+        margin-left: 75px;
+        margin-top: 20px;
+        position: relative;
+        z-index: 1;
+
+        img {
+            clip-path: inset(0 0 100% 0);
+
+            @include for-mobile {
+                display: none;
+            }
+        }
+    }
+
+    .instructions {
+        width: calc(60vw - 20px);
+        margin-left: -75px;
+        position: relative;
+        z-index: 2;
+
+        @include for-tablet {
+            width: 70vw;
+        }
+
+        @include for-mobile {
+            width: 100vw;
+        }
+
+        .instruction {
+            opacity: 0.3;
+            transition: opacity 300ms transform 0ms;
+
+            @include for-mobile {
+                width: 90vw;
+                margin-left: 0px;
+            }
+
+            .instruction-heading {
+                display: flex;
+                flex-direction: row;
+
+                .instruction-num h1 {
+                    color: white;
+                    background-color: #8888E5;
+                    height: 54px;
+                    width: 38px;
+                    border-radius: 100px;
+                    padding-left: 22px;
+                    font-weight: 500;
+                    padding-top: 6px;
+                    margin-top: 12px;
+                    margin-left: 25px;
+                    font-family: 'Roboto Slab';
+
+                    @include for-mobile {
+                        margin-left: 0px;
+                    }
+                }
+
+                .instruction-title {
+                    font-weight:400;
+                    font-size: 22px;
+                    color: #383E62;
+                    margin-top: 30px;
+                    margin-left: 25px;
+
+                    @include for-mobile {
+                        font-size: 20px;
+                    }
+                }
+            }
+
+            .instruction-text p {
+                font-size: 14px;
+                color: #8D91A2;
+                line-height: 25px;
+                margin-left: 110px;
+                margin-top: -28px;
+                font-weight: 300;
+
+                @include for-mobile {
+                    margin-left: 86px;
+                    font-size: 13px;
+                    line-height: 22px;
+                }
+            }
+        }
+
+        #instruction1 .instruction-num h1 {
+            padding-left: 24px;
+            width: 36px;
+        }
+
+        #instruction2, #instruction3 {
+            margin-top: 40px;
+        }
+
+        #instruction2 .instruction-text {
+            @include for-mobile {
+                margin-top: 25px;
+            }
+        }
+
+        #instruction3 {
+            @include for-tablet {
+                margin-top: 20px;
+            }
+        }
+    }
+
+    .for-restaurants-img {
+        width: 40vw;
+        margin-left: 25px;
+
+        @include for-tablet {
+            width: 30vw;
+        }
+
+        @include for-mobile {
+            display: none;
+        }
+
+        #for-restaurants-blue {
+            background-color: #8DA5F7;
+            height: 400px;
+            width: 350px;
+            border-radius: 7px;
+            border-top-right-radius: 0px;
+            border-bottom-right-radius: 0px;
+            margin-top: 30px;
+            margin-left: calc(40vw - 350px);
+            margin-top: 30px;
+
+            @include for-tablet {
+                width: 20vw;
+                margin-left: 10vw;
+                margin-top: 100px;
+            }
+
+            .blue-stripe {
+                background-color: #7E98F2;
+                border-radius: 2px;
+                height: 6px;
+                width: 250px;
+                margin-top: 27px;
+                margin-left: 50px;
+                transition: 350ms transform cubic-bezier(0.39,0.5,0.15,1.36);
+                transform: scale(0,1);
+                transform-origin: left;
+
+                @include for-tablet {
+                    width: 10vw;
+                    margin-left: 5vw;
+                }
+            }
+
+            #stripe1 {
+                @include for-tablet {
+                    padding-top: 20px;
+                }
+            }
+
+            #stripe1, #stripe2 {
+                opacity: 0;
+            }
+
+            #stripe3 {
+                width: 130px;
+
+                @include for-tablet {
+                    width: 10vw;
+                }
+            }
+
+            #stripe4 {
+                width: 190px;
+
+                @include for-tablet {
+                    width: 10vw;
+                }
+            }
+        }
+
+        #for-restaurants-shadow {
+            height: 100px;
+            width: 117px;
+            background-color: #889FEE;
+            margin-left: 233px;
+            margin-top: 63px;
+            border-top-left-radius: 7px;
+
+            @include for-tablet {
+                margin-left: calc(20vw - 117px);
+                margin-top: 43px;
+            }
+        }
+
+        #for-restaurants-green {
+            height: 110px;
+            width: 110px;
+            background-color: #84E29D;
+            border-top-left-radius: 7px;
+            border-bottom-left-radius: 7px;
+            margin-left: 240px;
+            margin-top: -95px;
+
+            @include for-tablet {
+                margin-left: calc(20vw - 110px);
+            }
+
+            img {
+                height: 70px;
+                width: 70px;
+                margin-top: 20px;
+                margin-left: 20px;
+            }
+        }
+    }
+}
