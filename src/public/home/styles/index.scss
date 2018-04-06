@@ -156,7 +156,8 @@ html, body {
 
 .signin-btn {
     @include for-mobile {
-        display: none;
+		display: none;
+		margin-top: 30px;
     }
 
     a {
@@ -193,7 +194,7 @@ html, body {
         height: 19px;
         transition: transform 400ms;
         position: absolute;
-        z-index: 1;
+		z-index: 1;
     }
 }
 
@@ -438,8 +439,8 @@ html, body {
         @include for-mobile {
             height: 60px;
             width: 300px;
-            margin-left: calc(50vw - 150px);
-            margin-top: -80px;
+            margin-left: calc(50vw - 153px);
+            margin-top: 24px;
         }
     }
 }
@@ -560,13 +561,17 @@ html, body {
             padding-top: 20px;
             padding-bottom: 20px;
             width: 300px;
-            margin-top: 25px;
+            margin-top: 112px !important;
             margin-left: 0px;
         }
     }
 
     .btn-outline {
-        margin-top: 50px;
+		margin-top: 50px;
+		
+		@include for-mobile {
+			margin-top: 110px;
+		}
     }
 }
 
@@ -586,8 +591,7 @@ html, body {
     @include for-mobile {
         height: 65px;
         width: 300px;
-        margin-left: 0px;
-        margin-top: -80px;
+		margin-left: 0px;
     }
 }
 
@@ -695,7 +699,11 @@ html, body {
     @include for-mobile {
         margin-left: 0;
         width: 100vw;
-    }
+	}
+	
+	@media (max-width: 321px) {
+		display: none;
+	}
 
     #ten-perc {
         font-size: 28px;
@@ -779,7 +787,6 @@ html, body {
 
         @include for-mobile {
             height: 67px;
-            margin-top: -81px;
             width: 300px;
             margin-left: 0px;
         }
@@ -977,7 +984,7 @@ html, body {
     width: 80vw;
     background-color: #D1D9DB;
     margin-left: 10vw;
-    margin-top: 5px;
+	margin-top: 5px;
 }
 
 .container4-contact-row {
@@ -989,5 +996,9 @@ html, body {
 
     @include for-mobile {
         font-size: 10px;
-    }
+	}
+	
+	@media (max-width: 321px) {
+		font-size: 9px;
+	}
 }
