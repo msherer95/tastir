@@ -2,7 +2,7 @@
 
 Tastir is my dream entrepreneurial project. 
 
-This is only the landing page of Tastir. I unfortunately do not currently have time to commit to it the way it needs, so I have left it at a landing page for now. 
+This is only the landing page of Tastir. I unfortunately do not have time to commit to the project right now, so it is only a landing page for now. 
 
 Tasir is an app that aims to improve your dining experience. Think about it; who doesn't love tapas? Buffets? Tasting menus? Poopoo platters? While they're different cuisines and different names, they all share something: variety. 
 
