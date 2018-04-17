@@ -14,7 +14,7 @@ const authenticated = require('./config/authenticated.js'); // functions to conf
 
 app.use(compression()); // enable gzip compression
 
-// listen to environmental port, or 8080 for localhost testing
+// listen to environmental port, or 9090 for localhost testing
 const port = process.env.PORT || 9090;
 app.listen(port, () => {
     console.log('Our app is running on http://localhost:' + port);
