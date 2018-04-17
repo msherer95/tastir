@@ -1,4 +1,4 @@
-# [Tastir](tastir.herokuapp.com)
+# [Tastir](https://tastir.herokuapp.com)
 
 Tastir is my dream entrepreneurial project. 
 
